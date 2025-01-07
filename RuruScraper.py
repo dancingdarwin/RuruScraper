@@ -196,7 +196,7 @@ if __name__ == '__main__':
             driver_service = webdriver.FirefoxService(executable_path=geckodriver_path)
         firefox_options = webdriver.firefox.options.Options()
         firefox_options.add_argument('--headless')
-        driver = webdriver.Firefox(options = firefox_options)
+        driver = webdriver.Firefox(options = firefox_options,service=driver_service)
     
         items = get_values(creds,spreadsheet_id=emails['spreadsheet_id'],values='A1:C100')['values']
 
