@@ -9,4 +9,4 @@ sender: <SENDER EMAIL> # The email sender
 spreadsheet_id: # The Google Sheet ID described at https://developers.google.com/sheets/api/guides/concepts
 ```
 
-`Credentials.json` - You need to set up your own Google API access credentials, which is described [here](https://developers.google.com/identity/protocols/oauth2)
+`credentials.json` - You need to set up your own Google API access credentials, which is described [here](https://developers.google.com/identity/protocols/oauth2)
