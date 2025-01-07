@@ -21,6 +21,7 @@ import os.path
 from datetime import datetime
 import traceback
 import yaml
+import platform
 
 def test_instock(driver,url):
     '''
@@ -190,6 +191,9 @@ if __name__ == '__main__':
 
         creds = google_authenticate()
 
+        if 'ubuntu' in platform.version().lower():
+            geckodriver_path = "/snap/bin/geckodriver"
+            driver_service = webdriver.FirefoxService(executable_path=geckodriver_path)
         firefox_options = webdriver.firefox.options.Options()
         firefox_options.add_argument('--headless')
         driver = webdriver.Firefox(options = firefox_options)
