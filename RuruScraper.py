@@ -41,12 +41,13 @@ def test_instock(driver,url):
         instock = False
     except NoSuchElementException: 
         try:
+            traceback.print_exc()
             driver.find_element(By.XPATH, "//button[contains(.,'Add to Bag')]")
             instock = True
         except:
             instock = None
-    except Exception as error:
-        print(error)
+    except:
+        traceback.print_exc()
         instock = None
     return instock
         
