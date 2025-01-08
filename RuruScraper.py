@@ -37,7 +37,7 @@ def test_instock(driver,url):
     driver.get(url)
     instock = None
     try:
-        driver.find_element(By.XPATH, "//button[contains(.,'SOLD OUT - NOTIFY ME')]")
+        driver.find_element(By.XPATH, "//button[contains(.,'SOLD OUT')]")
         instock = False
     except NoSuchElementException: 
         try:
